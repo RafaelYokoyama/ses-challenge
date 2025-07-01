@@ -179,6 +179,27 @@ sensedia-challenge-main/
         └── index.ts          # Definições de tipos
 ```
 
+## 🧪 Telas
+![image](https://github.com/user-attachments/assets/532d5813-1117-4986-81ed-da9eb2e27f96)
+![image](https://github.com/user-attachments/assets/42336589-35fc-46d1-b12a-cfa190ac385f)
+![image](https://github.com/user-attachments/assets/a85820ca-f160-4f2b-a517-00ce8d7c9eeb)
+![image](https://github.com/user-attachments/assets/aacd656f-bda1-41d0-95cc-7004daeb8d3c)
+
+![image](https://github.com/user-attachments/assets/e8bab01c-1266-4112-9452-527ef99ce37e)
+![image](https://github.com/user-attachments/assets/ac740bf2-f340-4b74-a74a-64814df236bf)
+![image](https://github.com/user-attachments/assets/1aefa666-fec8-4638-95ee-9b56b4b3d497)
+![image](https://github.com/user-attachments/assets/1a99c018-e3b8-419d-9b2c-fdb08b975982)
+
+![image](https://github.com/user-attachments/assets/b1bd102d-bb92-4110-9ab4-57439a5c81ce)
+![image](https://github.com/user-attachments/assets/846c83a4-a44c-406d-b7c9-92381fa35ddb)
+
+![image](https://github.com/user-attachments/assets/70406c9d-211c-4531-9b56-3a532643cd1c)
+![image](https://github.com/user-attachments/assets/cb1cc560-6d96-499b-a7ce-c16afb02027b)
+![image](https://github.com/user-attachments/assets/680f2e8e-1d58-4120-a8db-51a62978f55e)
+![image](https://github.com/user-attachments/assets/df9ff033-20b7-4a88-9f37-40dfc33b11b1)
+![image](https://github.com/user-attachments/assets/dcb5e2a4-dfaa-4455-b01f-e6760c76ddd9)
+
+
 ## 🧪 Testes
 
 ```bash
