@@ -60,7 +60,7 @@ class HttpClientClass {
       
       const responseText = await response.text()
 
-      let data: Record<string, unknown>
+      let data: Record<string, unknown> | string
       try {
         data = JSON.parse(responseText)
       } catch {
@@ -71,10 +71,12 @@ class HttpClientClass {
       }
 
       if (response.ok && data) {
+
         if (typeof data === 'string' && data.toUpperCase().includes('ERROR')) {
           throw new Error(data)
         }
         
+
         if (typeof data === 'object' && data !== null) {
           const objectData = data as Record<string, unknown>
           if (objectData.error || (objectData.message && !objectData.user && !objectData.users && typeof objectData.message === 'string' && objectData.message.toUpperCase().includes('ERROR'))) {
@@ -85,9 +87,13 @@ class HttpClientClass {
       }
 
       if (!response.ok) {
-        const objectData = data as Record<string, unknown>
-        const errorMessage = (objectData?.message as string) || `HTTP ${response.status}: ${response.statusText}`
-        throw new Error(errorMessage)
+        if (typeof data === 'object' && data !== null) {
+          const objectData = data as Record<string, unknown>
+          const errorMessage = (objectData?.message as string) || `HTTP ${response.status}: ${response.statusText}`
+          throw new Error(errorMessage)
+        } else {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+        }
       }
 
       return data as T
