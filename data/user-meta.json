@@ -1194,5 +1194,48 @@
       "Domingo"
     ],
     "username": "Rafael Y"
+  },
+  {
+    "user_id": "1bb83df1-0981-4715-a315-e7a122144b82",
+    "city": "Sorocaba",
+    "days": [
+      "Segunda",
+      "Domingo",
+      "Quarta"
+    ],
+    "username": "Tech"
+  },
+  {
+    "user_id": "3d0e5f2a-ade4-4d0c-9323-9be3b53b1a3b",
+    "city": "Itatiba",
+    "days": [
+      "Segunda",
+      "Terça",
+      "Domingo"
+    ],
+    "username": "Rafa"
+  },
+  {
+    "user_id": "c22106b8-9c31-45f2-bd06-3a486432eac4",
+    "city": "Sorocaba",
+    "days": [
+      "Segunda",
+      "Domingo",
+      "Quarta",
+      "Quinta",
+      "Terça",
+      "Sábado",
+      "Sexta"
+    ],
+    "username": "teste"
+  },
+  {
+    "user_id": "ee5f4731-8821-4183-84e0-8c3e6d6a133a",
+    "city": "Itatiba",
+    "days": [
+      "Segunda",
+      "Domingo"
+    ],
+    "username": "Credit Card teste"
   }
 ]

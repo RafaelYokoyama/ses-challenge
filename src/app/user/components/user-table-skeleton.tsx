@@ -1,7 +1,3 @@
-import { IoIosSearch } from 'react-icons/io'
-
-const skeletonArray = Array.from({ length: 8 })
-
 export default function UserTableSkeleton() {
   return (
     <div className="space-y-4 animate-pulse">

@@ -23,7 +23,7 @@ interface CheckboxGroupProps {
   name: keyof CreateUserFormData
   register: UseFormRegister<CreateUserFormData>
   control: Control<CreateUserFormData>
-  setValue: (name: keyof CreateUserFormData, value: any) => void
+  setValue: (name: keyof CreateUserFormData, value: DayOfWeek[]) => void
   trigger?: UseFormTrigger<CreateUserFormData>
   clearErrors?: UseFormClearErrors<CreateUserFormData>
 }
@@ -38,10 +38,7 @@ type DayOfWeek =
   | 'Domingo'
 
 const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
-  (
-    { label, options, error, name, control, setValue, trigger, clearErrors },
-    ref,
-  ) => {
+  ({ label, options, error, name, control, setValue, trigger }, ref) => {
     const watchedValues = useWatch({
       control,
       name,

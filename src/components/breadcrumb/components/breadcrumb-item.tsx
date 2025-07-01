@@ -1,3 +1,5 @@
+'use client'
+
 import SmartNavigation from '@/components/smart-navigation'
 import type { BreadcrumbItemProps } from '../breadcrumb.types'
 

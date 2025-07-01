@@ -10,27 +10,37 @@ import {
 } from '@/components/alert-dialog'
 import { deleteUser } from '@/http/delete-user'
 import { toast } from 'sonner'
-import { useState } from 'react'
+import { useState, Dispatch, SetStateAction } from 'react'
 
 interface DeleteUserModalProps {
   user_id: string
   userName: string
   onUserDeleted: () => void
+  onModalClose?: () => void
+  isDeleting?: boolean
+  setIsDeleting?: Dispatch<SetStateAction<boolean>>
 }
 
 const DeleteUserModal = ({
   user_id,
   userName,
   onUserDeleted,
+  onModalClose,
+  isDeleting: externalIsDeleting,
+  setIsDeleting: externalSetIsDeleting,
 }: DeleteUserModalProps) => {
-  const [isDeleting, setIsDeleting] = useState(false)
+  const [internalIsDeleting, setInternalIsDeleting] = useState(false)
+
+  const isDeleting =
+    externalIsDeleting !== undefined ? externalIsDeleting : internalIsDeleting
+  const setIsDeleting = externalSetIsDeleting || setInternalIsDeleting
 
   const handleDeleteUser = async () => {
     setIsDeleting(true)
 
     try {
       onUserDeleted()
-      toast.success(`Usuário &quot;${userName}&quot; excluído com sucesso`)
+      toast.success(`Usuário "${userName}" excluído com sucesso`)
 
       await deleteUser(user_id)
     } catch (error) {
@@ -38,6 +48,16 @@ const DeleteUserModal = ({
       toast.error('Erro ao excluir usuário. Recarregue a página se necessário.')
     } finally {
       setIsDeleting(false)
+
+      if (onModalClose) {
+        onModalClose()
+      }
+    }
+  }
+
+  const handleCancel = () => {
+    if (onModalClose) {
+      onModalClose()
     }
   }
 
@@ -54,7 +74,9 @@ const DeleteUserModal = ({
       </AlertDialogDescription>
 
       <AlertDialogFooter>
-        <AlertDialogCancel>Cancelar</AlertDialogCancel>
+        <AlertDialogCancel onClick={handleCancel} disabled={isDeleting}>
+          Cancelar
+        </AlertDialogCancel>
         <AlertDialogAction
           className="bg-red-500 text-white hover:bg-red-600 disabled:opacity-50"
           onClick={handleDeleteUser}

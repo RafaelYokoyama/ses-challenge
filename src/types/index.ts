@@ -1,4 +1,3 @@
-
 export interface User {
   id: string
   name: string
@@ -34,11 +33,11 @@ export interface Album {
 
 export interface UserDisplay {
   id: string
-  username: string
   name: string
+  username: string
   email: string
+  days: string
   city: string
-  days: string | string[]
   posts: number
   albums: number
   created_at: Date
@@ -50,4 +49,5 @@ export interface CreateUserFormData {
   email: string
   city: string
   days: ('Segunda' | 'Terça' | 'Quarta' | 'Quinta' | 'Sexta' | 'Sábado' | 'Domingo')[]
-} 
+}
+ 

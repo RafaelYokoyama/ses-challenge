@@ -1,6 +1,4 @@
 export * from './header.types'
-
-import HeaderComponent from './header'
 import HeaderWrapper from './header-wrapper'
 import { HeaderTop } from './header-top'
 import { HeaderNav } from './header-nav'

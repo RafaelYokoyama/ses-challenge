@@ -5,14 +5,27 @@ import { Header } from '@/components/header'
 
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: ({ src, alt, priority, ...props }: any) => (
-    <img
-      src={src}
-      alt={alt}
-      {...props}
-      data-priority={priority ? 'true' : 'false'}
-    />
-  ),
+  default: ({
+    src,
+    alt,
+    priority,
+    ...props
+  }: {
+    src: string
+    alt: string
+    priority?: boolean
+    [key: string]: unknown
+  }) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return (
+      <img
+        src={src}
+        alt={alt}
+        {...props}
+        data-priority={priority ? 'true' : 'false'}
+      />
+    )
+  },
 }))
 
 jest.mock('next/navigation', () => ({
@@ -40,7 +53,7 @@ jest.mock('@/http/get-user-profile', () => ({
 }))
 
 jest.mock('@/lib/breadcrumb-utils', () => ({
-  generateBreadcrumbs: jest.fn((pathname: string = '/test') => [
+  generateBreadcrumbs: jest.fn(() => [
     { href: '/test', label: 'Test', isActive: true },
   ]),
   formatLabel: jest.fn((label: string) => label),

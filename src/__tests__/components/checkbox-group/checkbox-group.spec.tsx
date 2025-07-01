@@ -10,7 +10,7 @@ const TestFormWrapper = ({
   error,
 }: {
   options: Array<{ value: string; label: string }>
-  error?: any
+  error?: { message: string; type: string }
 }) => {
   const { register, control, setValue, trigger } = useForm<CreateUserFormData>({
     defaultValues: {

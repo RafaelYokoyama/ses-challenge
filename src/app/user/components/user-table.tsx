@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { memo } from 'react'
 import Search from './ui/search'
 import UserTable from './ui/table'
 import { Pagination } from '@/components'
@@ -14,18 +14,20 @@ type UserTableProps = {
   initialUsers?: UserDisplay[]
 }
 
-export default function UserTableComponent({ initialUsers }: UserTableProps) {
+function UserTableComponent({ initialUsers }: UserTableProps) {
   const {
     users: paginatedUsers,
     filteredUsers,
     loading,
     search,
+    debouncedSearch,
     page,
     totalPages,
     handleSearch,
     handlePageChange,
     setPage,
     removeUser,
+    isSearching,
   } = useUserTable(initialUsers || [])
 
   if (loading) {
@@ -35,7 +37,12 @@ export default function UserTableComponent({ initialUsers }: UserTableProps) {
   return (
     <div className="space-y-4">
       <div className="py-4 bg-white rounded-md">
-        <Search search={search} setPage={setPage} setSearch={handleSearch} />
+        <Search
+          search={search}
+          setPage={setPage}
+          setSearch={handleSearch}
+          isSearching={isSearching}
+        />
 
         <div className="overflow-x-scroll lg:overflow-x-auto">
           <UserTable
@@ -43,6 +50,14 @@ export default function UserTableComponent({ initialUsers }: UserTableProps) {
             onUserDeleted={removeUser}
           />
         </div>
+
+        {search.trim() && !isSearching && (
+          <div className="px-4 py-2 text-sm text-gray-600 bg-gray-50 rounded-md mt-2">
+            {filteredUsers.length === 0
+              ? `Nenhum resultado encontrado para "${debouncedSearch}"`
+              : `${filteredUsers.length} resultado${filteredUsers.length !== 1 ? 's' : ''} para "${debouncedSearch}"`}
+          </div>
+        )}
 
         <Pagination.Root
           currentPage={page}
@@ -80,3 +95,5 @@ export default function UserTableComponent({ initialUsers }: UserTableProps) {
     </div>
   )
 }
+
+export default memo(UserTableComponent)

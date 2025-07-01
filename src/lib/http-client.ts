@@ -60,10 +60,10 @@ class HttpClientClass {
       
       const responseText = await response.text()
 
-      let data: any
+      let data: Record<string, unknown>
       try {
         data = JSON.parse(responseText)
-      } catch (parseError) {
+      } catch {
         if (!response.ok) {
           throw new Error(responseText || `HTTP ${response.status}: ${response.statusText}`)
         }
@@ -75,20 +75,22 @@ class HttpClientClass {
           throw new Error(data)
         }
         
-        if (typeof data === 'object') {
-          if (data.error || (data.message && !data.user && !data.users && data.message.toUpperCase().includes('ERROR'))) {
-            const errorMessage = data.message || data.error || 'Erro desconhecido'
+        if (typeof data === 'object' && data !== null) {
+          const objectData = data as Record<string, unknown>
+          if (objectData.error || (objectData.message && !objectData.user && !objectData.users && typeof objectData.message === 'string' && objectData.message.toUpperCase().includes('ERROR'))) {
+            const errorMessage = (objectData.message as string) || (objectData.error as string) || 'Erro desconhecido'
             throw new Error(errorMessage)
           }
         }
       }
 
       if (!response.ok) {
-        const errorMessage = data?.message || `HTTP ${response.status}: ${response.statusText}`
+        const objectData = data as Record<string, unknown>
+        const errorMessage = (objectData?.message as string) || `HTTP ${response.status}: ${response.statusText}`
         throw new Error(errorMessage)
       }
 
-      return data
+      return data as T
     } catch (error: unknown) {
       clearTimeout(timeoutId)
       throw error

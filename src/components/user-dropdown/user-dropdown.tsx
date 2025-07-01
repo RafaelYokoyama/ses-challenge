@@ -32,9 +32,7 @@ const UserDropdown: React.FC<UserDropDownProps> = ({ children, options }) => {
 
     import('react').then(({ startTransition }) => {
       startTransition(() => {
-        import('next/navigation').then(({ useRouter }) => {
-          window.location.href = `/${option.route}`
-        })
+        window.location.href = `/${option.route}`
       })
     })
     setIsOpen(false)

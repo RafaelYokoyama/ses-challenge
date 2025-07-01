@@ -1,7 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
-import { InternalHttpClient } from '@/lib/http-client'
+
 import { API_CONFIG } from '@/infra/config/api'
 
 interface CreateUserMetaDataProps {

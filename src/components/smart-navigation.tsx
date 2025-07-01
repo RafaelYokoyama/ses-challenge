@@ -1,24 +1,35 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { ComponentProps, MouseEvent, startTransition } from 'react'
+import { ComponentProps, MouseEvent, startTransition, useEffect } from 'react'
+import { AVOID_RSC_ROUTES } from '@/lib/performance-config'
 
 interface SmartNavigationProps extends ComponentProps<'button'> {
   href: string
   replace?: boolean
   preventRSC?: boolean
+  prefetch?: boolean
+  optimistic?: boolean
 }
 
 export function SmartNavigation({
   href,
   replace = false,
   preventRSC = true,
+  prefetch = true,
+  optimistic = false,
   children,
   className = '',
   onClick,
   ...props
 }: SmartNavigationProps) {
   const router = useRouter()
+
+  useEffect(() => {
+    if (prefetch && !preventRSC) {
+      router.prefetch(href)
+    }
+  }, [href, prefetch, preventRSC, router])
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
@@ -28,31 +39,41 @@ export function SmartNavigation({
     if (e.defaultPrevented) return
 
     e.preventDefault()
-    if (
-      preventRSC &&
-      (href.includes('/saved') ||
-        href.includes('/friends') ||
-        href.includes('/notifications') ||
-        href.includes('/preferences'))
-    ) {
+
+    if (preventRSC && AVOID_RSC_ROUTES.some((route) => href.includes(route))) {
       window.location.href = href
       return
     }
 
-    startTransition(() => {
+    if (optimistic) {
       if (replace) {
         router.replace(href)
       } else {
         router.push(href)
       }
-    })
+    } else {
+      startTransition(() => {
+        if (replace) {
+          router.replace(href)
+        } else {
+          router.push(href)
+        }
+      })
+    }
+  }
+
+  const handleMouseEnter = () => {
+    if (!preventRSC && prefetch) {
+      router.prefetch(href)
+    }
   }
 
   return (
     <button
       {...props}
-      className={`cursor-pointer ${className}`}
+      className={`cursor-pointer transition-all duration-200 ${className}`}
       onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
       type="button"
     >
       {children}

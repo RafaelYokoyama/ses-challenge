@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import SmartNavigation from '@/components/smart-navigation'
 import { LogoProps } from './header.types'

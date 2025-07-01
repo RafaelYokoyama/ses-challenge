@@ -65,7 +65,9 @@ export const HeaderNav = ({ userProfile }: HeaderNavProps) => {
     try {
       const allUsers = await getUsers()
 
-      const currentUser = allUsers.users.find((user: any) => user.id === userId)
+      const currentUser = allUsers.users.find(
+        (user: { id: string; name: string }) => user.id === userId,
+      )
 
       if (currentUser) {
         return currentUser.name

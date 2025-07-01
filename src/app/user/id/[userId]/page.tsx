@@ -61,7 +61,7 @@ export default async function UserPageById({ params }: UserPageProps) {
         albums={userAlbums?.albums || []}
       />
     )
-  } catch (error) {
+  } catch {
     return (
       <UserNotFound
         errorTitle="Erro ao carregar usuário"
