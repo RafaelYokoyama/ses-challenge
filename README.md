@@ -29,7 +29,7 @@ Este é um projeto Next.js + TypeScript que consome uma API externa para gerenci
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/ayranoliveira1/sensedia-challenge.git
+git clone https://github.com/RafaelYokoyama/ses-challenge.git
 cd sensedia-challenge
 ```
 
