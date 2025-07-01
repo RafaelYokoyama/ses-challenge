@@ -14,6 +14,7 @@ const UserForm = () => {
     reset,
     control,
     setValue,
+    trigger,
   } = form
 
   return (
@@ -67,6 +68,7 @@ const UserForm = () => {
               register={register}
               control={control}
               setValue={setValue}
+              trigger={trigger}
               error={errors.days}
             />
           </div>

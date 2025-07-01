@@ -1,7 +1,13 @@
 'use client'
 
 import { forwardRef } from 'react'
-import { UseFormRegister, Control, useWatch } from 'react-hook-form'
+import {
+  UseFormRegister,
+  Control,
+  useWatch,
+  UseFormTrigger,
+  UseFormClearErrors,
+} from 'react-hook-form'
 import { FormError, getErrorMessage } from '../form-types'
 import { CreateUserFormData } from '@/types'
 
@@ -18,6 +24,8 @@ interface CheckboxGroupProps {
   register: UseFormRegister<CreateUserFormData>
   control: Control<CreateUserFormData>
   setValue: (name: keyof CreateUserFormData, value: any) => void
+  trigger?: UseFormTrigger<CreateUserFormData>
+  clearErrors?: UseFormClearErrors<CreateUserFormData>
 }
 
 type DayOfWeek =
@@ -30,7 +38,10 @@ type DayOfWeek =
   | 'Domingo'
 
 const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
-  ({ label, options, error, name, control, setValue }, ref) => {
+  (
+    { label, options, error, name, control, setValue, trigger, clearErrors },
+    ref,
+  ) => {
     const watchedValues = useWatch({
       control,
       name,
@@ -39,7 +50,7 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
 
     const currentValues = Array.isArray(watchedValues) ? watchedValues : []
 
-    const handleChange = (optionValue: string, checked: boolean) => {
+    const handleChange = async (optionValue: string, checked: boolean) => {
       const dayValue = optionValue as DayOfWeek
       let newValues: DayOfWeek[]
 
@@ -54,6 +65,10 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
       }
 
       setValue(name, newValues)
+
+      if (trigger) {
+        await trigger(name)
+      }
     }
 
     return (

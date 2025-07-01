@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import CheckboxGroup from '@/components/checkbox-group'
 import { useForm } from 'react-hook-form'
@@ -12,7 +12,7 @@ const TestFormWrapper = ({
   options: Array<{ value: string; label: string }>
   error?: any
 }) => {
-  const { register, control, setValue } = useForm<CreateUserFormData>({
+  const { register, control, setValue, trigger } = useForm<CreateUserFormData>({
     defaultValues: {
       days: [],
     },
@@ -27,6 +27,7 @@ const TestFormWrapper = ({
         register={register}
         control={control}
         setValue={setValue}
+        trigger={trigger}
         error={error}
       />
     </form>
@@ -79,7 +80,7 @@ describe('CheckboxGroup Component', () => {
     expect(screen.queryByText(/required/)).not.toBeInTheDocument()
   })
 
-  it('checkboxes can be checked and unchecked', () => {
+  it('checkboxes can be checked and unchecked', async () => {
     render(<TestFormWrapper options={mockOptions} />)
 
     const checkboxes = screen.getAllByRole('checkbox')
@@ -87,10 +88,14 @@ describe('CheckboxGroup Component', () => {
 
     expect(firstCheckbox.checked).toBe(false)
 
-    fireEvent.click(firstCheckbox)
+    await act(async () => {
+      fireEvent.click(firstCheckbox)
+    })
     expect(firstCheckbox.checked).toBe(true)
 
-    fireEvent.click(firstCheckbox)
+    await act(async () => {
+      fireEvent.click(firstCheckbox)
+    })
     expect(firstCheckbox.checked).toBe(false)
   })
 
@@ -150,21 +155,27 @@ describe('CheckboxGroup Component', () => {
     expect(errorElement).toHaveClass('text-red-500', 'text-sm', 'mt-1')
   })
 
-  it('should handle multiple selections correctly', () => {
+  it('should handle multiple selections correctly', async () => {
     render(<TestFormWrapper options={mockOptions} />)
 
     const checkboxes = screen.getAllByRole('checkbox')
     const firstCheckbox = checkboxes[0] as HTMLInputElement
     const secondCheckbox = checkboxes[1] as HTMLInputElement
 
-    fireEvent.click(firstCheckbox)
+    await act(async () => {
+      fireEvent.click(firstCheckbox)
+    })
     expect(firstCheckbox.checked).toBe(true)
 
-    fireEvent.click(secondCheckbox)
+    await act(async () => {
+      fireEvent.click(secondCheckbox)
+    })
     expect(firstCheckbox.checked).toBe(true)
     expect(secondCheckbox.checked).toBe(true)
 
-    fireEvent.click(firstCheckbox)
+    await act(async () => {
+      fireEvent.click(firstCheckbox)
+    })
     expect(firstCheckbox.checked).toBe(false)
     expect(secondCheckbox.checked).toBe(true)
   })
