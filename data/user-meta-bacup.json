@@ -1,0 +1,432 @@
+[
+  {
+    "user_id": "5ba015f0-4b53-4a42-a046-648a85622fc3",
+    "city": "São Luís",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "11Henrique"
+  },
+  {
+    "user_id": "b6ab07cf-7e8b-4848-84b6-1877650725c2",
+    "city": "Campinas",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Sexta"
+    ],
+    "username": "zzFelipe"
+  },
+  {
+    "user_id": "37e7d5cb-49e6-49c2-9139-a5058ea2532a",
+    "city": "Fortaleza",
+    "days": [
+      "Domingo",
+      "Quarta",
+      "Sexta"
+    ],
+    "username": "mmBruno"
+  },
+  {
+    "user_id": "ec2141d2-9d88-4649-9f5e-e613266d3940",
+    "city": "João Pessoa",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "99Bianca"
+  },
+  {
+    "user_id": "8cfaa048-bb78-42a0-be0d-34048daa437c",
+    "city": "Teresina",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "77Vitória"
+  },
+  {
+    "user_id": "320e4f6e-cb22-4fee-a0d5-1eee0f94ef13",
+    "city": "Belo Horizonte",
+    "days": [
+      "Segunda"
+    ],
+    "username": "eeJoão"
+  },
+  {
+    "user_id": "7c27c941-c0a4-4bae-8f30-480047d52740",
+    "city": "Goiânia",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "wwThiago"
+  },
+  {
+    "user_id": "6e835f3c-7ad5-454f-9bdc-e0e1c28aadfa",
+    "city": "Porto Alegre",
+    "days": [
+      "Terça",
+      "Quinta"
+    ],
+    "username": "iiRafael"
+  },
+  {
+    "user_id": "6303d971-3378-4da6-bc8c-9080603cd49b",
+    "city": "Porto Alegre",
+    "days": [
+      "Terça",
+      "Quarta"
+    ],
+    "username": "jjJuliana"
+  },
+  {
+    "user_id": "41854536-52c7-40ea-8c8c-3646ce575ee2",
+    "city": "Maceió",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "22Isabela"
+  },
+  {
+    "user_id": "42f55e95-bc4a-4fda-9ddf-5303ead25655",
+    "city": "Natal",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "44Sophia"
+  },
+  {
+    "user_id": "4a2baa23-fde0-406e-8662-95396b2da46a",
+    "city": "João Pessoa",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "88Daniel"
+  },
+  {
+    "user_id": "2c61a210-bd31-425d-bef4-157dde2ccecf",
+    "city": "Teresina",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "77Vitória"
+  },
+  {
+    "user_id": "86adf091-74a2-446b-8ac3-7855a86ad9df",
+    "city": "João Pessoa",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "88Daniel"
+  },
+  {
+    "user_id": "59253f95-fb6f-483b-9728-0596888e3f8b",
+    "city": "Goiânia",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "xxLarissa"
+  },
+  {
+    "user_id": "aae48db7-cfab-45e9-9fb6-9988eceb42cb",
+    "city": "Maceió",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "33Mateus"
+  },
+  {
+    "user_id": "c3684e23-fb4d-4e15-ba96-307398284397",
+    "city": "Belo Horizonte",
+    "days": [
+      "Terça",
+      "Sábado"
+    ],
+    "username": "ffJoão"
+  },
+  {
+    "user_id": "f7856718-b127-4257-b1b2-b9488cebf6ea",
+    "city": "Maceió",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "33Mateus"
+  },
+  {
+    "user_id": "8767e3d1-ba7b-4abb-936e-5fec42e3b903",
+    "city": "Brasília",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "qqLetícia"
+  },
+  {
+    "user_id": "6799b33c-bb77-4f16-beda-af08cd990a70",
+    "city": "João Pessoa",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "88Bianca"
+  },
+  {
+    "user_id": "925c342b-20e3-4fe6-b03e-95d8983831fd",
+    "city": "Natal",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "44Sophia"
+  },
+  {
+    "user_id": "74a4add1-f626-4a49-986e-f888354ae9a2",
+    "city": "Curitiba",
+    "days": [
+      "Terça",
+      "Sexta"
+    ],
+    "username": "ggFernanda"
+  },
+  {
+    "user_id": "0692f0ef-5ef7-45c0-823c-a5f65aaa75c5",
+    "city": "São Luís",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "00Henrique"
+  },
+  {
+    "user_id": "29c68eea-ff6e-40b4-8892-446504a971bf",
+    "city": "Fortaleza",
+    "days": [
+      "Domingo",
+      "Quarta",
+      "Sexta"
+    ],
+    "username": "mmBruno"
+  },
+  {
+    "user_id": "f663190a-c29d-4b53-826b-49730bbcd0c9",
+    "city": "Belo Horizonte",
+    "days": [
+      "Segunda"
+    ],
+    "username": "eeMaria"
+  },
+  {
+    "user_id": "fb9b67c0-1be9-43c8-9544-d890bd5f31aa",
+    "city": "Curitiba",
+    "days": [
+      "Terça",
+      "Sexta"
+    ],
+    "username": "hhFernanda"
+  },
+  {
+    "user_id": "5aaf9f9f-a70f-4d4c-9927-f10609245f32",
+    "city": "São Luís",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "00Gabriela"
+  },
+  {
+    "user_id": "a63648a4-c0f6-4abf-bb60-dbaa4d82559d",
+    "city": "Fortaleza",
+    "days": [
+      "Domingo",
+      "Quarta",
+      "Sexta"
+    ],
+    "username": "mmBruno"
+  },
+  {
+    "user_id": "d8edcca3-618e-4215-94e8-906628d7c2e7",
+    "city": "Curitiba",
+    "days": [
+      "Terça",
+      "Sexta"
+    ],
+    "username": "ggFernanda"
+  },
+  {
+    "user_id": "b0a6dc6b-664c-4141-979e-b6fdecaf896b",
+    "city": "Campinas",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Sexta"
+    ],
+    "username": "yyFelipe"
+  },
+  {
+    "user_id": "e36ccfad-5f97-4473-b6d7-f0c926509382",
+    "city": "Salvador",
+    "days": [
+      "Domingo",
+      "Quarta",
+      "Sábado"
+    ],
+    "username": "llBeatriz"
+  },
+  {
+    "user_id": "caf9da46-96fc-4f87-80c1-6da5732758b0",
+    "city": "Rio de Janeiro",
+    "days": [
+      "Segunda"
+    ],
+    "username": "ddPedro"
+  },
+  {
+    "user_id": "3cb00155-dd5a-44d9-a1c0-6c2a6e65daf9",
+    "city": "João Pessoa",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"
+    ],
+    "username": "88Daniel"
+  },
+  {
+    "user_id": "f69f509e-2714-44c0-976a-4d8881faeec9",
+    "city": "São Paulo",
+    "days": [
+      "Segunda"
+    ],
+    "username": "bbAna"
+  },
+  {
+    "user_id": "f8698c7d-aa0c-4517-9163-ecb22b03fbcb",
+    "city": "Porto Alegre",
+    "days": [
+      "Terça",
+      "Quarta"
+    ],
+    "username": "jjJuliana"
+  },
+  {
+    "user_id": "c0a09225-ddc4-4e71-b3e4-37200575d32b",
+    "city": "Recife",
+    "days": [
+      "Domingo",
+      "Quarta",
+      "Quinta"
+    ],
+    "username": "ooDiego"
+  },
+  {
+    "user_id": "fde0eab9-467f-4172-9b86-c663c6bb5650",
+    "city": "São Luís",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sábado"
+    ],
+    "username": "11Isabela"
+  },
+  {
+    "user_id": "e917584b-baed-4f88-9436-93a79f724fb3",
+    "city": "Manaus",
+    "days": [
+      "Domingo",
+      "Segunda",
+      "Quinta",
+      "Sexta"
+    ],
+    "username": "ttMariana"
+  }
+]
