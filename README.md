@@ -193,6 +193,8 @@ sensedia-challenge-main/
 ![image](https://github.com/user-attachments/assets/b1bd102d-bb92-4110-9ab4-57439a5c81ce)
 ![image](https://github.com/user-attachments/assets/846c83a4-a44c-406d-b7c9-92381fa35ddb)
 
+![image](https://github.com/user-attachments/assets/658cbc4b-7502-4337-8455-a9085be8e75b)
+
 ![image](https://github.com/user-attachments/assets/70406c9d-211c-4531-9b56-3a532643cd1c)
 ![image](https://github.com/user-attachments/assets/cb1cc560-6d96-499b-a7ce-c16afb02027b)
 ![image](https://github.com/user-attachments/assets/680f2e8e-1d58-4120-a8db-51a62978f55e)
